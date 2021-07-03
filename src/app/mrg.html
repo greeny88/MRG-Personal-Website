@@ -12,9 +12,9 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side">
         <mat-nav-list>
-            <a mat-list-item routerLink="/bio" routerLinkActive="current-page">Bio</a>
-            <a mat-list-item routerLink="/projects" routerLinkActive="current-page">Projects</a>
-            <a mat-list-item routerLink="/resume" routerLinkActive="current-page">Resume</a>
+            <a mat-list-item routerLink="/bio" routerLinkActive="current-page" (click)="sidenav.toggle()">Bio</a>
+            <a mat-list-item routerLink="/projects" routerLinkActive="current-page" (click)="sidenav.toggle()">Projects</a>
+            <a mat-list-item routerLink="/resume" routerLinkActive="current-page" (click)="sidenav.toggle()">Resume</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

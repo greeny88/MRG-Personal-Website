@@ -53,11 +53,16 @@ mat-sidenav-container {
         a {
             color: black;
             text-decoration: none;
+            border-left: 0.5rem solid transparent;
+            border-bottom: 0.2rem solid #999;
+            &:first-child {
+                border-top: 0.2rem solid #999;
+            }
             &:hover {
-                border-right: 1rem solid mat-color($accent);
+                border-left: 0.5rem solid mat-color($accent);
             }
             &.current-page {
-                border-right: 1rem solid mat-color($primary);
+                border-left: 0.5rem solid mat-color($primary);
             }
         }
     }
@@ -73,7 +78,7 @@ footer {
 
 @media only screen and (max-width : 415px) {
     mat-toolbar {
-        span.nav-spacer, span.nav-link {
+        div.nav-spacer, div.nav-link {
             display: none;
         }
         button[mat-icon-button] {
