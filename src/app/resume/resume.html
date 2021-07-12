@@ -1,1 +1,26 @@
-<div>resume page. Nuff said.</div>
+<div>
+    <h1>Education</h1>
+    <h3>DeVry University. Kansas City, Missouri</h3>
+    <p>Bachelors of Science in Computer Information Systems</p>
+    <h1>Languages</h1>
+    <div class="languages-tech">
+        <div *ngFor="let lang of languages">{{ lang }}</div>
+    </div>
+    <h1>Frameworks and Technologies</h1>
+    <div class="languages-tech">
+        <div *ngFor="let tech of technologies">{{ tech }}</div>
+    </div>
+    <h1>Work Experience</h1>
+    <div *ngFor="let experience of experiences">
+        <h3>{{ experience.name }}</h3>
+        <p>{{ experience.address }}</p>
+        <p>{{ experience.duration }}</p>
+        <ul *ngFor="let description of experience.descriptors">
+            <li>{{ description }}</li>
+        </ul>
+    </div>
+    <h1>Other</h1>
+    <p>Github - <a href="https://github.com/greeny88" target="_blank">https://github.com/greeny88</a></p>
+    <p>StackOverflow - <a href="https://stackoverflow.com/users/1078110/matthew-green?tab=profile" target="_blank">https://stackoverflow.com/users/1078110/matthew-green?tab=profile</a></p>
+    <p>Boy Scouts of America Eagle Scout award</p>
+</div>
