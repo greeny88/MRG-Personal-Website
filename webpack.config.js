@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const packageInfo = require('./package.json');
 
@@ -25,7 +26,8 @@ const extractSassPlugin = new MiniCssExtractPlugin({
 	filename: paths.output.css
 });
 const htmlPlugin = new HtmlWebpackPlugin({
-	template: paths.index
+	template: paths.index,
+	// favicon: './src/favicon.ico'
 });
 const cleanDistPlugin = new CleanWebpackPlugin({
     cleanOnceBeforeBuildPatterns: ['**/*', '!.git', '!.git/**/*']
@@ -56,6 +58,7 @@ const workboxPlugin = new WorkboxPlugin.GenerateSW({
 const terserPlugin = new TerserPlugin({ 
 	extractComments: false 
 });
+const faviconPlugin = new FaviconsWebpackPlugin('./src/favicon.png');
 
 const scripts = {
 	test: /(?<!\.spec)\.ts$/,
@@ -135,7 +138,7 @@ let config = {
 			scripts,
 			markup,
 			styles,
-			images,
+			images
 		]
 	},
 	optimization: {
@@ -161,7 +164,8 @@ let config = {
 		cleanDistPlugin,
 		htmlPlugin,
 		extractSassPlugin,
-		workboxPlugin
+		workboxPlugin,
+		faviconPlugin
 	],
 	resolve: {
 		extensions: ['.ts', '.js', '*']
