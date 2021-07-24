@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HomeRoutesModule } from './home-routes.module';
 
+import './home.scss';
 
 @NgModule({
     imports: [
