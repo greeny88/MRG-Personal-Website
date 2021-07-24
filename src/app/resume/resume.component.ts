@@ -26,10 +26,11 @@ export class ResumeComponent {
             'duration': 'August 2011 - Present',
             'title': 'Senior Software Engineer',
             'descriptors': [
-                'Created multiple, interconnected web apps used for maintaining information about customers, services and monitoring processes along with searching for and downloading log files.',
+                'Created multiple, interconnected web apps used for maintaining information about customers, services, and monitoring processes, along with searching for and downloading log files related to those items.',
                 'Built a metric collection process and monitoring system tracking 10K’s of processes every few minutes managed by an AMQP engine.',
-                'Created an access governance system for the security department that collects, relates and tracks login information across multiple different internal and external systems used by our company.',
-                'Developed scripts to automate routine processes done by multiple varying departments across different environments.',
+                'Constructed an api for use by various web apps and automation scripts, along with maintaining the relational database that houses the data accessed by this webservice.',
+                'Designed an access governance system for the security department that collects, relates and tracks login information across multiple different internal and external systems used by our company.',
+                'Developed scripts to automate routine processes done by multiple varying departments across different environments and datacenters.',
                 'Helped implement an infrastructure as code tool for a new datacenter as part of a migration from an existing, on-premise datacenter.',
                 'Worked in Professional Services building eBill statements for universities along with installing and configuring software for them that ran in our datacenter and on their campus.'
             ]
@@ -39,9 +40,9 @@ export class ResumeComponent {
             'duration': 'July 2008 - September 2010',
             'title': 'System Operations Expert',
             'descriptors' : [
-                'Developed methods to streamline data entry for input into multiple CRM systems for our chapter.',
+                'Developed methods to streamline data entry for input into multiple CRM systems for our local chapter.',
                 'Updated and maintained our chapter website by researching new web development practices and worked with various staff to create a site that was informative and intuitive.',
-                'Worked with our corporate office and other staff across the nation to help create standard practice procedures for data, to do usability testing of new systems and participated in frequent user calls to facilitate the process.',
+                'Worked with our corporate office and other staff across the nation to help create standard practice procedures for data, to do usability testing of new systems, and participated in frequent user calls to facilitate the process.',
                 'Serviced and updated employee computers including virus removal and hardware updates.'
             ]
         }];
@@ -54,7 +55,8 @@ export class ResumeComponent {
             'CSS',
             'XML',
             'XSLT',
-            'Regex'
+            'Regex',
+            'Apex Salesforce'
         ];
         this.technologies = [
             'Angular',
