@@ -1,1 +1,22 @@
-<div>projects page. Simple slideshow/demo of projects with descriptions and link to code and live site.</div>
+<div>
+    <!-- projects page. Simple slideshow/demo of projects with descriptions and link to code and live site. -->
+    <!-- Use relative link and not router directive to get to projects -->
+    <mat-tab-group>
+        <ng-container *ngFor="let project of projects">
+            <mat-tab label="{{ project.name }}">
+                <mat-card class="projectCards">
+                    <!-- <mat-card-header>
+                        <mat-card-title>{{ project.name }}</mat-card-title>
+                    </mat-card-header> -->
+                    <mat-card-content>
+                        <p>{{ project.description }}</p>
+                    </mat-card-content>
+                    <!-- change into slideshow -->
+                    <div style="margin-top:1rem;">
+                        <img mat-card-image src="{{ project.images[0] }}" class="active" />
+                    </div>
+                </mat-card>
+            </mat-tab>
+        </ng-container>
+    </mat-tab-group>
+</div>

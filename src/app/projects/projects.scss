@@ -1,0 +1,12 @@
+.projectCards {
+    margin-bottom: 1rem;
+    
+    img {
+        max-width: 600px;
+        display: none;
+
+        &.active {
+            display: initial;
+        }
+    }
+}
