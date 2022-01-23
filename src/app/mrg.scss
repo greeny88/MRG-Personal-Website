@@ -35,8 +35,9 @@ mat-toolbar {
             margin-right: 0.5rem;
             border-bottom: 0.5rem solid transparent;
             a {
-                // color: mat-color($primary, default-contrast);
-                color: black;
+                color: inherit;
+                // color: mat-color($foreground, default-contrast);
+                // color: black;
                 text-decoration: none;
                 display: inline-block;
                 width: 100%;

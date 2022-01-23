@@ -6,19 +6,43 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// Consolas, Courier New, monospace
+// background nav: rgb 51 51 51
+// background main: rgb 30, 30, 30
+// text: #569CD6 blue
+// text: #6A9955 green
+// text: #9CDCFE whiteish
+// text: #CE9178 orange
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$mrg-app-primary: mat-palette($mat-green, 900);
-$mrg-app-accent: mat-palette($mat-deep-orange, 900);
+$mrg-main-primary: mat-palette($mat-blue, 800);
+$mrg-main-accent: mat-palette($mat-orange, 800);
+$mrg-alt-primary: mat-palette($mat-light-green, 800);
+$mrg-alt-accent: mat-palette($mat-purple, 600);
 
-// The warn palette is optional (defaults to red).
-$mrg-app-warn: mat-palette($mat-red);
+// $my-theme: mat-dark-theme((
+//  color: (
+//    primary: $my-primary,
+//    accent: $my-accent,
+//    warn: '',
+//    foreground: '',
+//    background: ''
+//  )
+// ));
 
 // Create the theme object (a Sass map containing all of the palettes).
-$mrg-app-theme: mat-light-theme($mrg-app-primary, $mrg-app-accent, $mrg-app-warn);
+$mrg-main-theme: mat-dark-theme($mrg-main-primary, $mrg-main-accent);
+@include angular-material-theme($mrg-main-theme);
 
-@include angular-material-theme($mrg-app-theme);
+$mrg-alt-theme: mat-dark-theme($mrg-alt-primary, $mrg-alt-accent);
+.alt-theme {
+    @include angular-material-color($mrg-alt-theme);
+}
 
-$primary: map-get($mrg-app-theme, primary);
-$accent: map-get($mrg-app-theme, accent);
+$foreground: map-get($mrg-main-theme, foreground);
+$primary: map-get($mrg-main-theme, primary);
+$accent: map-get($mrg-main-theme, accent);
+$primary-alt: map-get($mrg-alt-theme, primary);
+$accent-alt: map-get($mrg-alt-theme, accent);
