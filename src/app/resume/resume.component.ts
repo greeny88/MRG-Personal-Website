@@ -32,6 +32,7 @@ export class ResumeComponent {
                 'Designed an access governance system for the security department that collects, relates and tracks login information across multiple different internal and external systems used by our company.',
                 'Developed scripts to automate routine processes done by multiple varying departments across different environments and datacenters.',
                 'Helped implement an infrastructure as code tool for a new datacenter as part of a migration from an existing, on-premise datacenter.',
+                'Built Apex Salesforce classes in use on Visualforce pages and in Lightning components on our client community.',
                 'Worked in Professional Services building eBill statements for universities along with installing and configuring software for them that ran in our datacenter and on their campus.'
             ]
         }, {
@@ -56,6 +57,7 @@ export class ResumeComponent {
             'XML',
             'XSLT',
             'Regex',
+            'SQL',
             'Apex Salesforce'
         ];
         this.technologies = [
@@ -71,6 +73,8 @@ export class ResumeComponent {
             'Maven',
             'Jersey',
             'Sass',
+            'MSSQL',
+            'PostGres',
             'SVN',
             'Git'
         ];
