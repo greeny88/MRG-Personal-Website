@@ -1,4 +1,4 @@
-<div>
+<div class="alt-theme">
     <!-- projects page. Simple slideshow/demo of projects with descriptions and link to code and live site. -->
     <!-- Use relative link and not router directive to get to projects -->
     <mat-tab-group>
@@ -12,9 +12,9 @@
                         <p>{{ project.description }}</p>
                     </mat-card-content>
                     <!-- change into slideshow -->
-                    <div style="margin-top:1rem;">
-                        <img mat-card-image src="{{ project.images[0] }}" class="active" />
-                    </div>
+                    <mat-card-content style="margin-top:1rem;text-align:center;">
+                        <img src="{{ project.images[0] }}" class="active" />
+                    </mat-card-content>
                 </mat-card>
             </mat-tab>
         </ng-container>

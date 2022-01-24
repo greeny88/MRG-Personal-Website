@@ -1,5 +1,16 @@
+@import '../theme.scss';
+
+.mat-tab-labels {
+    border-bottom: 2px solid mat-color($accent-alt);
+}
+
 .projectCards {
     margin-bottom: 1rem;
+
+    p {
+        text-indent: 2rem;
+        margin-bottom: 2rem;
+    }
     
     img {
         max-width: 600px;
