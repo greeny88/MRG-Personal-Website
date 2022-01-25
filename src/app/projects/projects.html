@@ -1,19 +1,17 @@
 <div class="alt-theme">
-    <!-- projects page. Simple slideshow/demo of projects with descriptions and link to code and live site. -->
-    <!-- Use relative link and not router directive to get to projects -->
     <mat-tab-group>
         <ng-container *ngFor="let project of projects">
             <mat-tab label="{{ project.name }}">
                 <mat-card class="projectCards">
-                    <!-- <mat-card-header>
-                        <mat-card-title>{{ project.name }}</mat-card-title>
-                    </mat-card-header> -->
                     <mat-card-content>
                         <p>{{ project.description }}</p>
                     </mat-card-content>
-                    <!-- change into slideshow -->
-                    <mat-card-content style="margin-top:1rem;text-align:center;">
-                        <img src="{{ project.images[0] }}" class="active" />
+                    <mat-card-content style="margin-top:1rem; text-align:center;">
+                        <ng-container *ngFor="let image of project.images; let i = index">
+                            <img src="{{ image }}" class="projectImage" [ngClass]="{'active': i === 0}" attr.data-index="{{ i }}" />
+                        </ng-container>
+                        <button mat-raised-button class="mat-accent" (click)="previousImage(project.images.length)">Previous</button>
+                        <button mat-raised-button class="mat-accent"(click)="nextImage(project.images.length)">Next</button>
                     </mat-card-content>
                 </mat-card>
             </mat-tab>

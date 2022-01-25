@@ -39,4 +39,28 @@ export class ProjectsComponent {
             'images': [ dhs1, dhs2 ]
         }];
     }
+
+    nextImage(max: number) {
+        const activeImage = document.getElementsByClassName("projectImage active");
+        const currentIndex = parseInt(activeImage[0].getAttribute("data-index"));
+        const allImages = document.getElementsByClassName("projectImage");
+        allImages[currentIndex].classList.remove('active');
+        if ( currentIndex === ( max - 1 ) ) {
+            allImages[0].classList.add('active');
+        } else {
+            allImages[currentIndex+1].classList.add('active');
+        }
+    }
+
+    previousImage(max: number) {
+        const activeImage = document.getElementsByClassName("projectImage active");
+        const currentIndex = parseInt(activeImage[0].getAttribute("data-index"));
+        const allImages = document.getElementsByClassName("projectImage");
+        allImages[currentIndex].classList.remove('active');
+        if (currentIndex === 0) {
+            allImages[max-1].classList.add('active');
+        } else {
+            allImages[currentIndex-1].classList.add('active');
+        }
+    }
 }
