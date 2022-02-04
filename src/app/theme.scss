@@ -22,27 +22,39 @@ $mrg-main-accent: mat-palette($mat-orange, 800);
 $mrg-alt-primary: mat-palette($mat-light-green, 800);
 $mrg-alt-accent: mat-palette($mat-purple, 600);
 
-// $my-theme: mat-dark-theme((
-//  color: (
-//    primary: $my-primary,
-//    accent: $my-accent,
-//    warn: '',
-//    foreground: '',
-//    background: ''
-//  )
-// ));
+$mrg-foreground: mat-palette($mat-blue-grey, 50);
 
-// Create the theme object (a Sass map containing all of the palettes).
-$mrg-main-theme: mat-dark-theme($mrg-main-primary, $mrg-main-accent);
+$mrg-main-theme: mat-dark-theme((
+    color: (
+        primary: $mrg-main-primary,
+        accent: $mrg-main-accent,
+        foreground: $mrg-foreground
+    )
+));
+// $mrg-main-theme: mat-dark-theme($mrg-main-primary, $mrg-main-accent);
 @include angular-material-theme($mrg-main-theme);
 
-$mrg-alt-theme: mat-dark-theme($mrg-alt-primary, $mrg-alt-accent);
+$mrg-alt-theme: mat-dark-theme((
+    color: (
+        primary: $mrg-alt-primary,
+        accent: $mrg-alt-accent,
+        foreground: $mrg-foreground
+    )
+));
+// $mrg-alt-theme: mat-dark-theme($mrg-alt-primary, $mrg-alt-accent);
 .alt-theme {
     @include angular-material-color($mrg-alt-theme);
 }
 
-$foreground: map-get($mrg-main-theme, foreground);
+// $foreground: map-get($mrg-main-theme, foreground);
+$foreground: #ECEFF1;
 $primary: map-get($mrg-main-theme, primary);
 $accent: map-get($mrg-main-theme, accent);
 $primary-alt: map-get($mrg-alt-theme, primary);
 $accent-alt: map-get($mrg-alt-theme, accent);
+
+$mrg-typography: mat-typography-config(
+    $font-family: 'Roboto Mono, Courier New, monospace',
+    $body-1: mat-typography-level(18px, 28px, 500)
+);
+@include angular-material-typography($mrg-typography);

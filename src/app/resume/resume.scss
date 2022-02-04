@@ -8,12 +8,25 @@ h3 {
     color: mat-color($primary);
 }
 
+.default-text-color {
+    // color: mat-color($foreground, base);
+    color: $foreground;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.indent-2 {
+    padding-left: 4rem;
+}
+
 .languages-tech {
-    color: mat-color($accent);
     display: flex;
     flex-flow: row wrap;
 
     div {
+        color: mat-color($accent);
         flex: 1 1 50%;
     }
 }
