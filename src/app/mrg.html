@@ -1,9 +1,16 @@
 <mat-toolbar>
     <div class="nav-title">Matthew Green</div>
     <div class="nav-spacer"></div>
-    <div class="nav-link" routerLinkActive="current-page"><a routerLink="/bio">Bio</a></div>
-    <div class="nav-link" routerLinkActive="current-page"><a routerLink="/projects">Projects</a></div>
-    <div class="nav-link" routerLinkActive="current-page"><a routerLink="/resume">Resume</a></div>
+    <div class="nav-link" routerLinkActive="current-page" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/bio">Bio</a>
+        <a routerLink="/" style="display:none;">Home</a>
+    </div>
+    <div class="nav-link" routerLinkActive="current-page">
+        <a routerLink="/projects">Projects</a>
+    </div>
+    <div class="nav-link" routerLinkActive="current-page">
+        <a routerLink="/resume">Resume</a>
+    </div>
     <div class="nav-spacer"></div>
     <button mat-icon-button aria-label="menu icon" (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
@@ -12,7 +19,7 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side">
         <mat-nav-list>
-            <a mat-list-item routerLink="/bio" routerLinkActive="current-page" (click)="sidenav.toggle()">Bio</a>
+            <a mat-list-item routerLink="/bio" routerLinkActive="current-page" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()">Bio<a routerLink="/" style="display:none;">Home</a></a>
             <a mat-list-item routerLink="/projects" routerLinkActive="current-page" (click)="sidenav.toggle()">Projects</a>
             <a mat-list-item routerLink="/resume" routerLinkActive="current-page" (click)="sidenav.toggle()">Resume</a>
         </mat-nav-list>

@@ -13,12 +13,8 @@ const routes: Routes = [{
     path: 'resume',
     loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
 }, {
-//     path: '',
-//     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-// }, {
     path: '',
-    redirectTo: 'bio',
-    pathMatch: 'full'
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
 }, {
     path: '**',
     component: PageNotFoundComponent
