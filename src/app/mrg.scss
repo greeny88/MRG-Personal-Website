@@ -58,6 +58,9 @@ mat-toolbar {
     button[mat-icon-button] {
         display: none;
     }
+    .nav-title a {
+        text-decoration-line: none;
+    }
 }
 
 mat-sidenav-container {
