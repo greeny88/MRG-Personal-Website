@@ -3,7 +3,7 @@ home {
         text-indent: 2rem;
     }
     img {
-        max-width: 15rem;
+        max-width: 20rem;
         float: right;
         margin-top: 1rem;
         margin-left: 1rem;
@@ -15,6 +15,7 @@ home {
     home {
         img {
             float: initial;
+            width: 95%;
         }
     }
 }
