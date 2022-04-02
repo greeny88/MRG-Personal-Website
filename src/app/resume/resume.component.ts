@@ -27,7 +27,7 @@ export class ResumeComponent {
             'title': 'Senior Software Engineer',
             'descriptors': [
                 'Created multiple, interconnected web apps used for maintaining information about customers, services, and monitoring processes, along with searching for and downloading log files related to those items.',
-                'Built a metric collection process and monitoring system tracking 10K’s of processes every few minutes managed by an AMQP engine.',
+                'Built a metric collection process and monitoring system tracking 10K of processes every few minutes managed by an AMQP engine.',
                 'Constructed an api for use by various web apps and automation scripts, along with maintaining the relational database that houses the data accessed by this webservice.',
                 'Designed an access governance system for the security department that collects, relates and tracks login information across multiple different internal and external systems used by our company.',
                 'Developed scripts to automate routine processes done by multiple varying departments across different environments and datacenters.',
@@ -76,7 +76,9 @@ export class ResumeComponent {
             'MSSQL',
             'PostGres',
             'SVN',
-            'Git'
+            'Git',
+            'Ansible',
+            'GCP'
         ];
     }
 }
