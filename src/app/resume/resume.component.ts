@@ -27,13 +27,17 @@ export class ResumeComponent {
             'title': 'Senior Software Engineer',
             'descriptors': [
                 'Created multiple, interconnected web apps used for maintaining information about customers, services, and monitoring processes, along with searching for and downloading log files related to those items.',
+                'Constructed a REST api for use by various web apps and automation scripts, along with maintaining the relational database that houses the data accessed by this web service.',
                 'Built a metric collection process and monitoring system tracking 10K of processes every few minutes managed by an AMQP engine.',
-                'Constructed an api for use by various web apps and automation scripts, along with maintaining the relational database that houses the data accessed by this webservice.',
-                'Designed an access governance system for the security department that collects, relates and tracks login information across multiple different internal and external systems used by our company.',
-                'Developed scripts to automate routine processes done by multiple varying departments across different environments and datacenters.',
-                'Helped implement an infrastructure as code tool for a new datacenter as part of a migration from an existing, on-premise datacenter.',
+                'Created an access governance system for the security department that collects, relates and tracks login information across different internal and external systems used by our company employees.',
+                'Developed scripts to automate routine processes done by various departments across different datacenters.',
+                'Helped implement an infrastructure-as-code tool for a new datacenter as part of a migration from an existing, on-premise datacenter to a hosted, virtual environment.',
+                'Created multiple ETLs for getting data in and out of our secure datacenter for use in reporting and analytics.',
+                'Migrated svn projects to git.',
+                'Took previously built CI/CD processes from Bamboo and moved them to GCP using Cloud Build and Artifact Repository.',
                 'Built Apex Salesforce classes in use on Visualforce pages and in Lightning components on our client community.',
-                'Worked in Professional Services building eBill statements for universities along with installing and configuring software for them that ran in our datacenter and on their campus.'
+                'Worked in Professional Services building eBill statements for universities along with installing and configuring software for them that ran in our datacenter and on their campus.',
+                'Managed projects with outside partners in order to integrate their software with our own product sold to universities.'
             ]
         }, {
             'name': 'National MS Society',
@@ -56,29 +60,35 @@ export class ResumeComponent {
             'CSS',
             'XML',
             'XSLT',
-            'Regex',
             'SQL',
-            'Apex Salesforce'
+            'Regular Expressions',
+            'Shell',
+            'Apex (Salesforce)'
         ];
         this.technologies = [
             'Angular',
             'AngularJS',
-            'Webpack',
-            'Grunt',
-            'Node.js',
-            'RabbitMQ',
             'Bootstrap',
             'Material Design',
             'NPM',
             'Maven',
             'Jersey',
-            'Sass',
-            'MSSQL',
-            'PostGres',
+            'Node.js',
+            'Webpack',
+            'Grunt',
             'SVN',
             'Git',
+            'MSSQL',
+            'PostGres',
+            'RabbitMQ',
+            'Sass',
+            'GCP',
             'Ansible',
-            'GCP'
+            'Terraform',
+            'Bamboo',
+            'Karma',
+            'Jasmine',
+            'JUnit'
         ];
     }
 }
