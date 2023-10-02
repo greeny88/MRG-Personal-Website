@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import template from './resume.html';
-
 interface Experience {
     name: string,
     address: string,
@@ -12,7 +10,8 @@ interface Experience {
 
 @Component({
     selector: 'resume',
-    template
+    templateUrl: './resume.component.html',
+    styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
     experiences: Experience[];

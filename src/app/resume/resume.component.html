@@ -2,17 +2,17 @@
     <h1>Education<span class="default-text-color">{{ '() {' }}</span></h1>
     <h3 class="indent">Bachelors of Science in Computer Information Systems</h3>
     <p class="indent-2">DeVry University. Kansas City, Missouri</p>
-    <h1 class="default-text-color">}</h1>
+    <h1 class="default-text-color">{{ '}' }}</h1>
     <h1>Languages<span class="default-text-color">{{ '() {' }}</span></h1>
     <div class="languages-tech indent">
         <div *ngFor="let lang of languages">"{{ lang }}"</div>
     </div>
-    <h1 class="default-text-color">}</h1>
+    <h1 class="default-text-color">{{ '}' }}</h1>
     <h1>Frameworks_and_Technologies<span class="default-text-color">{{ '() {' }}</span></h1>
     <div class="languages-tech indent">
         <div *ngFor="let tech of technologies">"{{ tech }}"</div>
     </div>
-    <h1 class="default-text-color">}</h1>
+    <h1 class="default-text-color">{{ '}' }}</h1>
     <h1>Work_Experience<span class="default-text-color">{{ '() {' }}</span></h1>
     <div *ngFor="let experience of experiences" class="indent">
         <h3>{{ experience.name }}</h3>
@@ -23,7 +23,7 @@
             <li>{{ description }}</li>
         </ul>
     </div>
-    <h1 class="default-text-color">}</h1>
+    <h1 class="default-text-color">{{ '}' }}</h1>
     <h1 class="otherAchievements">/* Other */</h1>
     <p class="otherAchievements"># Github - <a href="https://github.com/greeny88" target="_blank">https://github.com/greeny88</a></p>
     <p class="otherAchievements"># StackOverflow - <a href="https://stackoverflow.com/users/1078110/matthew-green?tab=profile" target="_blank">https://stackoverflow.com/users/1078110/matthew-green?tab=profile</a></p>

@@ -1,0 +1,51 @@
+// Consolas, Courier New, monospace
+// background nav: rgb 51 51 51
+// background main: rgb 30, 30, 30
+// text: #569CD6 blue
+// text: #6A9955 green
+// text: #9CDCFE whiteish
+// text: #CE9178 orange
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+$personal-website-typography: mat.define-typography-config(
+    $font-family: 'Roboto Mono, Courier New, monospace',
+    $body-1: mat.define-typography-level(18px, 28px, 500)
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$personal-website-primary: mat.define-palette(mat.$blue-palette, 800);
+$personal-website-accent: mat.define-palette(mat.$orange-palette, 800);
+$personal-website-foreground: mat.define-palette(mat.$blue-grey-palette, 50);
+
+$personal-website-theme: mat.define-dark-theme((
+  color: (
+    primary: $personal-website-primary,
+    accent: $personal-website-accent,
+    foreground: $personal-website-foreground
+  ),
+  typography: $personal-website-typography
+));
+
+$personal-website-primary-alt: mat.define-palette(mat.$light-green-palette, 800);
+$personal-website-accent-alt: mat.define-palette(mat.$purple-palette, 600);
+
+$personal-website-theme-alt: mat.define-dark-theme((
+    color: (
+        primary: $personal-website-primary-alt,
+        accent: $personal-website-accent-alt,
+        foreground: $personal-website-foreground
+    ),
+    typography: $personal-website-typography
+));
+
+$primary: map.get(map.get(mat.get-color-config($personal-website-theme), 'primary'), 'default');
+$accent: map.get(map.get(mat.get-color-config($personal-website-theme), 'accent'), 'default');
+$primary-alt: map.get(map.get(mat.get-color-config($personal-website-theme-alt), 'primary'), 'default');
+$accent-alt: map.get(map.get(mat.get-color-config($personal-website-theme-alt), 'accent'), 'default');
+$foreground: #ECEFF1;

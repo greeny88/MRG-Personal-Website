@@ -10,9 +10,7 @@
                         <p>Project link: <a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
                     </mat-card-content>
                     <mat-card-content style="margin-top:1rem; text-align:center;">
-                        <ng-container *ngFor="let image of project.images; let i = index">
-                            <img src="{{ image }}" class="projectImage" [ngClass]="{'active': i === 0}" attr.data-index="{{ i }}" />
-                        </ng-container>
+                        <img *ngFor="let image of project.images; let i = index" src="{{ image }}" class="projectImage" [ngClass]="{'active': i === 0}" attr.data-index="{{ i }}" />
                         <br/>
                         <button mat-raised-button class="mat-accent" (click)="previousImage(project.images.length)">Previous</button>
                         <button mat-raised-button class="mat-accent"(click)="nextImage(project.images.length)">Next</button>

@@ -1,15 +1,14 @@
-@import '../theme.scss';
+@import 'src/theme';
 
 h1 {
-    color: mat-color($accent-alt);
+    color: $accent-alt;
 }
 
 h3 {
-    color: mat-color($primary);
+    color: $primary;
 }
 
 .default-text-color {
-    // color: mat-color($foreground, base);
     color: $foreground;
 }
 
@@ -26,11 +25,11 @@ h3 {
     flex-flow: row wrap;
 
     div {
-        color: mat-color($accent);
+        color: $accent;
         flex: 1 1 50%;
     }
 }
 
 .otherAchievements {
-    color: mat-color($primary-alt);
+    color: $primary-alt;
 }

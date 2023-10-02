@@ -1,7 +1,7 @@
-@import '../theme.scss';
+@import 'src/theme';
 
 .mat-tab-labels {
-    border-bottom: 2px solid mat-color($accent-alt);
+    border-bottom: 2px solid $accent-alt;
 }
 
 .projectCards {

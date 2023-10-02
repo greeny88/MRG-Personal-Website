@@ -7,8 +7,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ProjectsComponent } from './projects.component';
 import { ProjectsRoutesModule } from './project-routes.module';
 
-import './projects.scss';
-
 @NgModule({
     imports: [
         CommonModule,
