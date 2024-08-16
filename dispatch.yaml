@@ -1,0 +1,5 @@
+dispatch:
+  - url: "matthewrobertgreen.com/"
+    service: default
+  - url: "rainbowroadtrip.matthewrobertgreen.com/"
+    service: rainbowroadtrip
