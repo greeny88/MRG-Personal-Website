@@ -32,7 +32,7 @@ $personal-website-theme: mat.define-dark-theme((
   typography: $personal-website-typography
 ));
 
-$personal-website-primary-alt: mat.define-palette(mat.$light-green-palette, 800);
+$personal-website-primary-alt: mat.define-palette(mat.$light-green-palette, 700);
 $personal-website-accent-alt: mat.define-palette(mat.$purple-palette, 600);
 
 $personal-website-theme-alt: mat.define-dark-theme((
