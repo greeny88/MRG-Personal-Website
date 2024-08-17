@@ -1,5 +1,5 @@
 dispatch:
   - url: "matthewrobertgreen.com/"
     service: default
-  - url: "rainbowroadtrip.matthewrobertgreen.com/"
-    service: rainbowroadtrip
+  - url: "ffb.matthewrobertgreen.com/"
+    service: ffb
