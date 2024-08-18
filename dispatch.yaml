@@ -1,5 +1,5 @@
 dispatch:
   - url: "matthewrobertgreen.com/"
     service: default
-  - url: "ffb.matthewrobertgreen.com/"
+  - url: "freeblades.matthewrobertgreen.com/"
     service: ffb
