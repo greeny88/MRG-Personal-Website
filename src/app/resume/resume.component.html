@@ -17,11 +17,13 @@
     <div *ngFor="let experience of experiences" class="indent">
         <h3>{{ experience.name }}</h3>
         <p>{{ experience.address }}</p>
-        <p>{{ experience.duration }}</p>
-        <p>{{ experience.title }}</p>
-        <ul *ngFor="let description of experience.descriptors">
-            <li>{{ description }}</li>
-        </ul>
+        <ng-container *ngFor="let position of experience.positions">
+            <p style="font-weight: bold;">{{ position.title }}</p>
+            <p>{{ position.duration }}</p>
+            <ul *ngFor="let description of position.descriptors">
+                <li>{{ description }}</li>
+            </ul>
+        </ng-container>
     </div>
     <h1 class="default-text-color">{{ '}' }}</h1>
     <h1 class="otherAchievements">/* Other */</h1>
