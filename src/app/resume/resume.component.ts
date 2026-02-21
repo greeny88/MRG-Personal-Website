@@ -47,7 +47,7 @@ export class ResumeComponent {
                     'Helped implement an infrastructure-as-code tool for a new datacenter as part of a migration from an existing, on-premise datacenter to a hosted, virtual environment.',
                     'Created multiple ETLs for getting data in and out of our secure datacenter for use in reporting and analytics.',
                     'Migrated svn projects to git.',
-                    'Took previously built CI/CD processes from Bamboo and moved them to GCP using Cloud Build and Artifact Repository.',
+                    'Took previously built CI/CD processes from Bamboo and moved them to GCP using Cloud Build and Artifact Registry.',
                     'Built Apex Salesforce classes in use on Visualforce pages and in Lightning components on our client community.',
                 ]
             },{
@@ -103,6 +103,8 @@ export class ResumeComponent {
             'Git',
             'MSSQL',
             'PostGres',
+            'GitHub Copilot',
+            'MS365 Copilot',
             'GCP',
             'Ansible',
             'Terraform',
