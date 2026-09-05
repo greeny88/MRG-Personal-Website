@@ -11,19 +11,19 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
 
-$personal-website-typography: mat.define-typography-config(
+$personal-website-typography: mat.m2-define-typography-config(
     $font-family: 'Roboto Mono, Courier New, monospace',
-    $body-1: mat.define-typography-level(18px, 28px, 500)
+    $body-1: mat.m2-define-typography-level(18px, 28px, 500)
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$personal-website-primary: mat.define-palette(mat.$blue-palette, 800);
-$personal-website-accent: mat.define-palette(mat.$orange-palette, 800);
-$personal-website-foreground: mat.define-palette(mat.$blue-grey-palette, 50);
+$personal-website-primary: mat.m2-define-palette(mat.$m2-blue-palette, 800);
+$personal-website-accent: mat.m2-define-palette(mat.$m2-orange-palette, 800);
+$personal-website-foreground: mat.m2-define-palette(mat.$m2-blue-grey-palette, 50);
 
-$personal-website-theme: mat.define-dark-theme((
+$personal-website-theme: mat.m2-define-dark-theme((
   color: (
     primary: $personal-website-primary,
     accent: $personal-website-accent,
@@ -32,10 +32,10 @@ $personal-website-theme: mat.define-dark-theme((
   typography: $personal-website-typography
 ));
 
-$personal-website-primary-alt: mat.define-palette(mat.$light-green-palette, 700);
-$personal-website-accent-alt: mat.define-palette(mat.$purple-palette, 600);
+$personal-website-primary-alt: mat.m2-define-palette(mat.$m2-light-green-palette, 700);
+$personal-website-accent-alt: mat.m2-define-palette(mat.$m2-purple-palette, 600);
 
-$personal-website-theme-alt: mat.define-dark-theme((
+$personal-website-theme-alt: mat.m2-define-dark-theme((
     color: (
         primary: $personal-website-primary-alt,
         accent: $personal-website-accent-alt,
@@ -44,8 +44,8 @@ $personal-website-theme-alt: mat.define-dark-theme((
     typography: $personal-website-typography
 ));
 
-$primary: map.get(map.get(mat.get-color-config($personal-website-theme), 'primary'), 'default');
-$accent: map.get(map.get(mat.get-color-config($personal-website-theme), 'accent'), 'default');
-$primary-alt: map.get(map.get(mat.get-color-config($personal-website-theme-alt), 'primary'), 'default');
-$accent-alt: map.get(map.get(mat.get-color-config($personal-website-theme-alt), 'accent'), 'default');
+$primary: map.get(map.get(mat.m2-get-color-config($personal-website-theme), 'primary'), 'default');
+$accent: map.get(map.get(mat.m2-get-color-config($personal-website-theme), 'accent'), 'default');
+$primary-alt: map.get(map.get(mat.m2-get-color-config($personal-website-theme-alt), 'primary'), 'default');
+$accent-alt: map.get(map.get(mat.m2-get-color-config($personal-website-theme-alt), 'accent'), 'default');
 $foreground: #ECEFF1;
