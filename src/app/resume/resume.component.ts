@@ -13,7 +13,8 @@ interface Experience {
 @Component({
     selector: 'resume',
     templateUrl: './resume.component.html',
-    styleUrls: ['./resume.component.scss']
+    styleUrls: ['./resume.component.scss'],
+    standalone: false
 })
 export class ResumeComponent {
     experiences: Experience[];
