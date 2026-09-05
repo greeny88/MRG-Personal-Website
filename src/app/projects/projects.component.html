@@ -1,22 +1,24 @@
 <div class="alt-theme">
-    <mat-tab-group>
-        <ng-container *ngFor="let project of projects">
-            <mat-tab label="{{ project.name }}">
-                <mat-card class="projectCards">
-                    <mat-card-content>
-                        <p>{{ project.description }}</p>
-                    </mat-card-content>
-                    <mat-card-content>
-                        <p>Project link: <a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
-                    </mat-card-content>
-                    <mat-card-content style="margin-top:1rem; text-align:center;">
-                        <img *ngFor="let image of project.images; let i = index" src="{{ image }}" class="projectImage" [ngClass]="{'active': i === 0}" attr.data-index="{{ i }}" />
-                        <br/>
-                        <button mat-raised-button class="mat-accent" (click)="previousImage(project.images.length)">Previous</button>
-                        <button mat-raised-button class="mat-accent"(click)="nextImage(project.images.length)">Next</button>
-                    </mat-card-content>
-                </mat-card>
-            </mat-tab>
-        </ng-container>
-    </mat-tab-group>
+  <mat-tab-group>
+    @for (project of projects; track project) {
+      <mat-tab label="{{ project.name }}">
+        <mat-card class="projectCards">
+          <mat-card-content>
+            <p>{{ project.description }}</p>
+          </mat-card-content>
+          <mat-card-content>
+            <p>Project link: <a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
+          </mat-card-content>
+          <mat-card-content style="margin-top:1rem; text-align:center;">
+            @for (image of project.images; track image; let i = $index) {
+              <img src="{{ image }}" class="projectImage" [ngClass]="{'active': i === 0}" attr.data-index="{{ i }}" />
+            }
+            <br/>
+            <button mat-raised-button class="mat-accent" (click)="previousImage(project.images.length)">Previous</button>
+            <button mat-raised-button class="mat-accent"(click)="nextImage(project.images.length)">Next</button>
+          </mat-card-content>
+        </mat-card>
+      </mat-tab>
+    }
+  </mat-tab-group>
 </div>
