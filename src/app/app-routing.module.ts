@@ -5,16 +5,16 @@ import { PageNotFoundComponent } from './page-not-found.component';
 
 const routes: Routes = [{
     path: 'bio',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
 }, {
     path: 'projects',
-    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
+    loadComponent: () => import('./projects/projects.component').then(m => m.ProjectsComponent)
 }, {
     path: 'resume',
-    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
+    loadComponent: () => import('./resume/resume.component').then(m => m.ResumeComponent)
 }, {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
 }, {
     path: '**',
     component: PageNotFoundComponent
