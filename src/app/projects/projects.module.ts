@@ -13,9 +13,7 @@ import { ProjectsRoutesModule } from './project-routes.module';
         MatButtonModule,
         MatCardModule,
         MatTabsModule,
-        ProjectsRoutesModule
-    ],
-    declarations: [
+        ProjectsRoutesModule,
         ProjectsComponent
     ]
 })

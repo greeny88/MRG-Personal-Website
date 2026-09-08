@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MatTabGroup, MatTab } from '@angular/material/tabs';
+import { MatCard, MatCardContent } from '@angular/material/card';
+import { NgClass } from '@angular/common';
+import { MatButton } from '@angular/material/button';
 
 interface Project {
     name: string,
@@ -11,7 +15,7 @@ interface Project {
     selector: 'projects',
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss'],
-    standalone: false
+    imports: [MatTabGroup, MatTab, MatCard, MatCardContent, NgClass, MatButton]
 })
 export class ProjectsComponent {
     projects: Project[];

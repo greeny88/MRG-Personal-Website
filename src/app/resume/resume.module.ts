@@ -7,9 +7,7 @@ import { ResumeRoutesModule } from './resume-routes.module';
 @NgModule({
     imports: [
         CommonModule,
-        ResumeRoutesModule
-    ],
-    declarations: [
+        ResumeRoutesModule,
         ResumeComponent
     ]
 })
